@@ -16,7 +16,28 @@ for (int i = 0; i < m; i++)
     string a = Console.ReadLine();
     strArray[i] = a;
 }
+// for (int i = 0; i < strArray.Length; i++)
+// {
+// Console.Write($"{strArray[i]},");
+// }
+
 for (int i = 0; i < strArray.Length; i++)
 {
-Console.Write($"{strArray[i]},");
+    if (strArray[i].Length < 4)
+    {
+        count++;
+    }
+}
+Console.WriteLine();
+
+string[] Array2 = new string[count];
+int j = 0;
+for (int i = 0; i < strArray.Length; i++)
+{
+    if (strArray[i].Length < 4)
+    {
+        Array2[j] = strArray[i];
+        Console.Write($"{Array2[j]},");
+        j++;
+    }
 }
